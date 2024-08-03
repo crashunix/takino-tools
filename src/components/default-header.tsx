@@ -15,7 +15,7 @@ const DefaultHeader = () => {
 			{
 				pathname != '/' ?
 					<Link href={'/'}>
-						<Button variant={'ghost'} size={'icon'} className="absolute left-0"><ArrowLeftIcon /></Button>
+						<Button variant={'ghost'} size={'icon'} className="absolute left-4"><ArrowLeftIcon /></Button>
 					</Link>
 					: null
 			}

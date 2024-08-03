@@ -12,6 +12,16 @@ export default function Home() {
           name: "Password generator",
           description: "Custom password generator",
           path: "/password-generator"
+        },
+        {
+          name: "CNPJ generator",
+          description: "Generate a new random CNPJ",
+          path: "/cnpj-generator"
+        },
+        {
+          name: "CPF generator",
+          description: "Generate a new random CPF",
+          path: "/cpf-generator"
         }
       ]
     }

@@ -20,37 +20,37 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { copyToClipboard } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
-import { generateCnpj } from "@/services/cnpj-generator";
+import { generateCpf } from "@/services/cpf-generator";
 
-const cnpjSchema = z.object({
+const cpfSchema = z.object({
 	format: z.boolean()
 });
 
-type CnpjFormValues = z.infer<typeof cnpjSchema>;
+type CpfFormValues = z.infer<typeof cpfSchema>;
 
-export default function CnpjGenerator() {
-	const form = useForm<CnpjFormValues>({
-		resolver: zodResolver(cnpjSchema),
+export default function CpfGenerator() {
+	const form = useForm<CpfFormValues>({
+		resolver: zodResolver(cpfSchema),
 		defaultValues: {
 			format: true,
 		},
 	});
 
-	const [generatedCnpj, setGeneratedCnpj] = useState("");
+	const [generatedCpf, setGeneratedCpf] = useState("");
 
 	const { toast } = useToast()
 
-	const onSubmit = (data: CnpjFormValues) => {
+	const onSubmit = (data: CpfFormValues) => {
 		console.log("Form submitted");
 		console.log(data);
 		try {
-			const Cnpj = generateCnpj(data);
-			setGeneratedCnpj(Cnpj); // Exemplo de senha gerada
-			handleCopyToClipboard(Cnpj);
+			const Cpf = generateCpf(data);
+			setGeneratedCpf(Cpf); // Exemplo de senha gerada
+			handleCopyToClipboard(Cpf);
 		} catch (err) {
 			toast({
-				title: "CNPJ Generator",
-				description: "Error generating CNPJ"
+				title: "CPF Generator",
+				description: "Error generating CPF"
 			});
 		}
 	};
@@ -58,8 +58,8 @@ export default function CnpjGenerator() {
 	const handleCopyToClipboard = (content: string) => {
 		copyToClipboard(content);
 		toast({
-			title: "CNPJ Generator",
-			description: "CNPJ copied"
+			title: "CPF Generator",
+			description: "CPF copied"
 		});
 	}
 
@@ -67,8 +67,8 @@ export default function CnpjGenerator() {
 		<main className="flex justify-center">
 			<Card className="w-full max-w-md">
 				<CardHeader>
-					<CardTitle>CNPJ Generator</CardTitle>
-					<CardDescription>Generate a new CNPJ.</CardDescription>
+					<CardTitle>CPF Generator</CardTitle>
+					<CardDescription>Generate a new CPF.</CardDescription>
 				</CardHeader>
 				<Form {...form}>
 					<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -84,17 +84,17 @@ export default function CnpjGenerator() {
 												<FormControl>
 													<Checkbox id="format" checked={field.value} onCheckedChange={field.onChange} />
 												</FormControl>
-												<FormLabel htmlFor="format">Format CNPJ</FormLabel>
+												<FormLabel htmlFor="format">Format CPF</FormLabel>
 											</FormItem>
 										)}
 									/>
 								</div>
 							</div>
 							<div className="grid gap-2">
-								<FormLabel htmlFor="cnpj">Generated CNPJ</FormLabel>
+								<FormLabel htmlFor="cpf">Generated CPF</FormLabel>
 								<div className="flex gap-2">
-									<Input id="cnpj" type="text" value={generatedCnpj} readOnly />
-									<Button type="button" onClick={() => handleCopyToClipboard(generatedCnpj)}>Copy</Button>
+									<Input id="cpf" type="text" value={generatedCpf} readOnly />
+									<Button type="button" onClick={() => handleCopyToClipboard(generatedCpf)}>Copy</Button>
 								</div>
 							</div>
 						</CardContent>
