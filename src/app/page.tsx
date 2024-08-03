@@ -10,6 +10,7 @@ export default function Home() {
       tools: [
         {
           name: "Password generator",
+          description: "Custom password generator",
           path: "/password-generator"
         }
       ]
@@ -22,7 +23,7 @@ export default function Home() {
         <section key={index}>
           <div className="container mx-auto px-4 space-y-4">
             <h2 className="text-bold">{section.title}</h2>
-            <div className="grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
               {section.tools.map((tool, index) => (
                 <ToolItem key={index} tool={tool} />
               ))}

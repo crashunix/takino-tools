@@ -18,14 +18,14 @@ const ToolItem = ({ tool }: ToolItemProps) => {
 	return <Link href={tool.path}><Card>
 		<CardHeader>
 			<CardTitle>{tool.name}</CardTitle>
-			<CardDescription>Card Description</CardDescription>
+			<CardDescription>{tool.description}</CardDescription>
 		</CardHeader>
-		<CardContent>
+		{/* <CardContent>
 			<p>Card Content</p>
 		</CardContent>
 		<CardFooter>
 			<p>Card Footer</p>
-		</CardFooter>
+		</CardFooter> */}
 	</Card></Link>
 }
 
