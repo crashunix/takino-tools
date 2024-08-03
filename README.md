@@ -16,7 +16,9 @@ Features
 Screenshot
 ----------
 
-![Takino Screenshot](./screenshot.png)
+![image](https://github.com/user-attachments/assets/b7efc397-9e43-41a5-af7a-5208baf06364)
+![image](https://github.com/user-attachments/assets/785098eb-3629-48e6-9e50-1ed7b36ec6c6)
+
 
 Getting Started
 ---------------
