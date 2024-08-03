@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeftIcon } from "lucide-react";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const DefaultHeader = () => {
 
@@ -20,6 +21,9 @@ const DefaultHeader = () => {
 					: null
 			}
 			<h1 className="text-3xl font-semibold">takino.</h1>
+			<div className="absolute right-4">
+				<ThemeSwitcher />
+			</div>
 			<p>useful tools</p>
 		</div>
 	</header>;

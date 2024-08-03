@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import DefaultHeader from "@/components/default-header";
 import { Toaster } from "@/components/ui/toaster";
+import Providers from "@/providers";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,9 +30,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <DefaultHeader />
-        {children}
-        <Toaster />
+        <Providers>
+          <DefaultHeader />
+          {children}
+          <footer className="flex justify-center text-center text-xs py-10">
+            <span>by <a href="https://github.com/crashunix" target="_blank" className="text-primary underline">crashunix</a></span>
+          </footer>
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );
