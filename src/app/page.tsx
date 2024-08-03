@@ -29,6 +29,21 @@ export default function Home() {
           path: "/rg-generator"
         }
       ]
+    },
+    {
+      title: "Validators",
+      tools: [
+        {
+          name: "CPF Validator",
+          description: "Validate cpf",
+          path: "/cpf-validator"
+        },
+        {
+          name: "CNPJ Validator",
+          description: "Validate cnpj",
+          path: "/cnpj-validator"
+        }
+      ]
     }
   ]
 
