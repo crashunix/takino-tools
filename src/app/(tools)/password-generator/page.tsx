@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { generatePassword } from "@/services/password-generator";
+import { generatePassword } from "@/services/generators/password-generator";
 import { copyToClipboard } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
 

@@ -20,7 +20,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { copyToClipboard } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
-import { generateRg } from "@/services/rg-generator";
+import { generateRg } from "@/services/generators/rg-generator";
 
 const rgSchema = z.object({
 	format: z.boolean()
