@@ -15,7 +15,7 @@ const generatePassword = ({
 }: GeneratePasswordProps): string => {
   const lowercaseChars = "abcdefghjkmnpqrstuvwxyz"; // Removed similar chars like 'i', 'l'
   const uppercaseChars = "ABCDEFGHJKMNPQRSTUVWXYZ"; // Removed similar chars like 'I', 'L'
-  const numberChars = "23456789"; // Removed similar chars like '0', '1'
+  const numberChars = "0123456789"; // Removed similar chars like '0', '1'
   const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
   
   let chars = "";
