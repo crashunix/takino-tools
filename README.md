@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Takino
+======
 
-## Getting Started
+**Takino** is a collection of useful tools for developers, including password, CPF, CNPJ, and RG generators, as well as CPF and CNPJ validators.
 
-First, run the development server:
+Features
+--------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Password Generator**: Generate custom passwords with various options.
+*   **CPF Generator**: Generate random valid CPFs.
+*   **CNPJ Generator**: Generate random valid CNPJs.
+*   **RG Generator**: Generate random valid RGs.
+*   **CPF Validator**: Validate Brazilian CPFs.
+*   **CNPJ Validator**: Validate Brazilian CNPJs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Screenshot
+----------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Takino Screenshot](./screenshot.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Getting Started
+---------------
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Make sure you have the following software installed on your machine:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   Node.js (v18 or later)
+*   npm (v8 or later)
+*   Tauri (v1.2 or later)
+*   Rust and Cargo (for Tauri)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository**
+    
+        git clone https://github.com/crashunix/takino-tools.git
+        cd takino-tools
+    
+2.  **Install dependencies**
+    
+        npm install
+    
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running the Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Development Mode
+
+To run the project in development mode:
+
+    
+1.  **Start the Tauri development server**
+    
+        cargo tauri dev
+    
+
+This will start the development server at `http://localhost:3000` and launch the Tauri application.
+
+#### Production Build
+
+To create a production build of the project:
+
+1.  **Build the Tauri application**
+    
+        cargo tauri build
+    
+
+This will generate the production builds in the `target` directory.
+
+### Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1.  **Fork the repository**
+2.  **Create a new branch**
+    
+        git checkout -b feature/your-feature-name
+    
+3.  **Make your changes**
+4.  **Commit your changes**
+    
+        git commit -m "Add some feature"
+    
+5.  **Push to your branch**
+    
+        git push origin feature/your-feature-name
+    
+6.  **Create a pull request**
+
+### License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+* * *
+
+This project was created with ❤️ by [crashunix](https://github.com/crashunix).
+
+* * *
+
+### Additional Notes
+
+*   **Styling**: The project uses Tailwind CSS for styling.
+*   **Form Handling**: The project uses `react-hook-form` for handling forms.
+*   **Validation**: Validation is handled using `zod`.
+
+### Issues
+
+If you encounter any issues, please create a [new issue](https://github.com/crashunix/takino-tools/issues) on GitHub.
+
+### Contact
+
+If you have any questions or feedback, feel free to reach out at [jgomesmacario@outlook.com](mailto:jgomesmacario@outlook.com).
+
+* * *
+
+This README provides an overview of the project, including instructions for setting up and running the project, as well as guidelines for contributing. If you have any additional questions, please contact the maintainers.
