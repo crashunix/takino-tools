@@ -18,7 +18,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { copyToClipboard } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
-import { generateCpf } from "@/services/generators/cpf-generator";
+import { generateCpf } from "@/services/generators/cpf-generator/cpf-generator";
 
 const cpfSchema = z.object({
 	format: z.boolean()

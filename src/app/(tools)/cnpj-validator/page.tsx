@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { isValidCNPJ } from "@/services/validators/cnpj-validator";
+import { isValidCNPJ } from "@/services/validators/cnpj-validator/cnpj-validator";
 
 const cnpjSchema = z.object({
   cnpj: z.string().min(11, "CNPJ must be at least 11 characters long").max(14, "CNPJ must be at most 14 characters long"),

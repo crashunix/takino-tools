@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { isValidCPF } from "@/services/validators/cpf-validator";
+import { isValidCPF } from "@/services/validators/cpf-validator/cpf-validator";
 
 const cpfSchema = z.object({
   cpf: z.string().min(11, "CPF must be at least 11 characters long").max(14, "CPF must be at most 14 characters long"),
