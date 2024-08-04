@@ -18,7 +18,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { copyToClipboard } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
-import { generateCnpj } from "@/services/generators/cnpj-generator";
+import { generateCnpj } from "@/services/generators/cnpj-generator/cnpj-generator";
 
 const cnpjSchema = z.object({
 	format: z.boolean()
