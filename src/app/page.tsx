@@ -22,11 +22,6 @@ export default function Home() {
           name: "CPF generator",
           description: "Generate a new random CPF",
           path: "/cpf-generator"
-        },
-        {
-          name: "RG generator",
-          description: "Generate a new random RG",
-          path: "/rg-generator"
         }
       ]
     },
